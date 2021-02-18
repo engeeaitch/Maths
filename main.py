@@ -50,7 +50,7 @@ def isAnswer(n10, n1, d10, d1, a10, a1):
 def isDuplicated(listOfDigits):
     # Store the numbers in a set - this will remove any duplicates
     setOfDigits = set(listOfDigits)
-    # Now compare the length of the list with the length of the set
+    # Now compare the length (number of digits) of the list with the length of the set
     if len(setOfDigits) != len(listOfDigits):
         # Must be duplicates
         return False
