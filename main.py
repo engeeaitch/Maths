@@ -1,4 +1,4 @@
-# Program to solve maths problem
+# Program to solve maths problem...
 
 # Find all cases where two digit numerator, divided by two digit denominator gives a two digit answer as a %age
 # Each digit must be unique, and must use the digits 0, 1, 2, 3, 5, 6
