@@ -40,7 +40,7 @@ def isAnswer(n10, n1, d10, d1, a10, a1):
         # but need to check against dividing by zero.
         return False
     answer = a10 * 10 + a1
-    # Now do the test...
+    # Now do the test (answer is a percentage)...
     if numerator / denominator * 100 == answer:
         return True
     return False
