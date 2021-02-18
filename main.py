@@ -28,6 +28,19 @@ def main():
 
 
 def isAnswer(n10, n1, d10, d1, a10, a1):
+    """Checks to see if the chosen digits are a valid answer
+
+    Args:
+        n10 (int): numerator tens
+        n1 (int): numerator units
+        d10 (int): denominator tens
+        d1 (int): denominator units
+        a10 (int): answer tens
+        a1 (int): answer units
+
+    Returns:
+        Boolean: True if digits form a correct answer, else False
+    """
     # First check to see if any digits are repeated
     if not isDuplicated([n10, n1, d10, d1, a10, a1]):
         return False
@@ -35,19 +48,27 @@ def isAnswer(n10, n1, d10, d1, a10, a1):
     # Now check to see if the calculation equals the answer
     numerator = n10 * 10 + n1
     denominator = d10 * 10 + d1
+    answer = a10 * 10 + a1
     if denominator == 0:
         # Should never happen because to be zero, the digits would need to be duplicated
         # but need to check against dividing by zero.
         return False
-    answer = a10 * 10 + a1
     # Now do the test (answer is a percentage)...
     if numerator / denominator * 100 == answer:
         return True
     return False
 
 
-# Check to see if any of the digits are duplicated
 def isDuplicated(listOfDigits):
+    """Checks to see if any of the supplied digits are duplicated
+
+    Args:
+        listOfDigits (list): a list of the digits to be checked
+
+    Returns:
+        Boolean: True if any of the digits are duplicated, False if none are
+    """
+
     # Store the numbers in a set - this will remove any duplicates
     setOfDigits = set(listOfDigits)
     # Now compare the length (number of digits) of the list with the length of the set
