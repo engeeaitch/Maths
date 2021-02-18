@@ -13,7 +13,7 @@ def main():
     allowableDigits = [0, 1, 2, 3, 5, 6]
 
     # Use to keep track of the number of answers
-    answer = 1
+    answer = 0
     # Check all the allowable digits for each of the six digits
     for n10 in allowableDigits:
         for n1 in allowableDigits:
@@ -22,9 +22,9 @@ def main():
                     for a10 in allowableDigits:
                         for a1 in allowableDigits:
                             if isAnswer(n10, n1, d10, d1, a10, a1):
+                                answer = answer + 1
                                 print(
                                     f"Answer {answer} is {n10}{n1}/{d10}{d1} = {a10}{a1}%")
-                                answer = answer + 1
 
 
 def isAnswer(n10, n1, d10, d1, a10, a1):
